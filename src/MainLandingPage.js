@@ -21,7 +21,7 @@ import { ReactComponent as ArrowRightIcon } from "images/arrow-right-3-icon.svg"
 import heroScreenshotImageSrc from "images/demo/MainLandingPageHero.png";
 import logo from "images/logo.svg";
 import useInView from "@owaiswiz/use-in-view";
-import AgencyLandingPage from "./demos/AgencyLandingPage";
+import AgencyLandingPage from "./demos/LandingPage";
 import BackgroundAsImage from "./components/hero/BackgroundAsImage";
 
 /* Hero */

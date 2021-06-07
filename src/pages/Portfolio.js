@@ -17,13 +17,6 @@ import gallery12 from 'images/portfolioGallery/gallery12.mp4'
 
 const images = [
     {
-        original: gallery11,
-        thumbnail: gallery11,
-        embedUrl: 'https://www.youtube.com/embed/nZPX7v17Bl8',
-        description: 'rut',
-        renderItem: renderVideo.bind(this)
-    },
-    {
         original: gallery1,
         thumbnail: gallery1,
         description: 'Full interior detail'
@@ -68,7 +61,13 @@ const images = [
         thumbnail: gallery11,
         description: 'Platinum exterior package on a 15 year old Acura RSX'
     },
-
+    {
+        original: gallery11,
+        thumbnail: gallery11,
+        embedUrl: 'https://www.youtube.com/embed/nZPX7v17Bl8',
+        description: 'rut',
+        renderItem: renderVideo.bind(this)
+    },
 ];
 
 function renderVideo(item) {

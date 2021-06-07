@@ -85,7 +85,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 /* Ready Made Pages (from demos folder) */
 // import EventLandingPage from "demos/EventLandingPage.js";
 // import HotelTravelLandingPage from "demos/HotelTravelLandingPage.js";
-// import AgencyLandingPage from "demos/AgencyLandingPage.js";
+// import AgencyLandingPage from "demos/LandingPage.js";
 // import SaaSProductLandingPage from "demos/SaaSProductLandingPage.js";
 // import RestaurantLandingPage from "demos/RestaurantLandingPage.js";
 // import ServiceLandingPage from "demos/ServiceLandingPage.js";
@@ -106,7 +106,7 @@ import MainLandingPage from "MainLandingPage.js";
 import ThankYouPage from "ThankYouPage.js";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import AgencyLandingPage from "./demos/AgencyLandingPage";
+import AgencyLandingPage from "./demos/LandingPage";
 import AboutUs from "./pages/AboutUs";
 import Pricing from "./pages/Pricing";
 import Hero from "components/hero/BackgroundAsImage.js";

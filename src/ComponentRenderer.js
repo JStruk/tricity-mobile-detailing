@@ -4,7 +4,7 @@ import AnimationRevealPage from "helpers/AnimationRevealPage.js"
 
 import EventLandingPage from "demos/EventLandingPage.js";
 import HotelTravelLandingPage from "demos/HotelTravelLandingPage.js";
-import AgencyLandingPage from "demos/AgencyLandingPage.js";
+import AgencyLandingPage from "demos/LandingPage.js";
 import SaaSProductLandingPage from "demos/SaaSProductLandingPage.js";
 import RestaurantLandingPage from "demos/RestaurantLandingPage.js";
 import ServiceLandingPage from "demos/ServiceLandingPage.js";
@@ -370,7 +370,7 @@ export const components = {
           component: ThreeColSimpleWithImageAndDashedBorderBlog,
           url: "/components/blocks/Blog/ThreeColSimpleWithImageAndDashedBorder",
         },
-      } 
+      }
     },
 
     Testimonial: {
