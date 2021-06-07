@@ -46,7 +46,7 @@ const StyledResponsiveVideoEmbed = styled(ResponsiveVideoEmbed)`
 
 const MainDiv = tw.div`items-center justify-center flex h-screen text-white`
 
-const SubHeadingDiv = tw.div`text-lg text-center`
+const SubHeadingDiv = tw.div`text-2xl text-center`
 
 export default () => {
   return (
