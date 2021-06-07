@@ -28,7 +28,7 @@ export default ({ links }) => {
         primaryButtonText="Book Now"
         heading=""
         description="Our primary goal at Tri City Mobile Detailing is to make your car look and smell the same as the day you drove it off the lot. All done at the convenience of your home or workplace! Everybody loves a clean car but may not have time to take it somewhere to get cleaned."
-        imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
+        imageSrc="https://res.cloudinary.com/detailing-jstruk-com/image/upload/v1623092101/DSC03216_go4jk5.jpg"
       />
       <MainFeature1
         subheading=""
@@ -36,7 +36,7 @@ export default ({ links }) => {
         buttonRounded={false}
         primaryButtonText="Contact Us"
         description="Having to wait and arrange a pickup time from your detailing appoiontment is half the hassle, with Tri City Mobile Detailing we eliminate the hassle completely by coming to you. We use industry leading car care products, high quality equipment and our years of detailing knowledge to deliver you a convenient high end service."
-        imageSrc="https://images.unsplash.com/3/doctype-hi-res.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=768&q=80"
+        imageSrc="https://res.cloudinary.com/detailing-jstruk-com/image/upload/v1623093160/IMG_2557_n0t7ns.jpg"
         textOnLeft={false}
       />
       <TeamCardGrid

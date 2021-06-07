@@ -46,42 +46,16 @@ export default ({
   description = "Both Tyler and Cory have previous detailing experience and a natural passion for cars",
   cards = [
     {
-      imageSrc: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&fit=facearea&facepad=2.95&w=512&h=512&q=80",
+      imageSrc: "https://res.cloudinary.com/detailing-jstruk-com/image/upload/v1623091020/MUG_SHOT_uacw3c.jpg",
       position: "Co Founder",
       name: "Cory Kitchen",
-      links: [
-        {
-          url: "https://twitter.com",
-          icon: TwitterIcon,
-        },
-        {
-          url: "https://linkedin.com",
-          icon: LinkedinIcon,
-        },
-        {
-          url: "https://github.com",
-          icon: GithubIcon,
-        },
-      ],
+      links: [],
     },
     {
-      imageSrc: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&fit=facearea&facepad=2.95&w=512&h=512&q=80",
+      imageSrc: "https://res.cloudinary.com/detailing-jstruk-com/image/upload/v1623088460/Warlord_MUG_SHOT_dcoqiu.jpg",
       position: "Co Founder",
       name: "Tyler Warchild",
-      links: [
-        {
-          url: "https://twitter.com",
-          icon: TwitterIcon,
-        },
-        {
-          url: "https://linkedin.com",
-          icon: LinkedinIcon,
-        },
-        {
-          url: "https://github.com",
-          icon: GithubIcon,
-        },
-      ],
+      links: [],
     },
   ]
 }) => {
