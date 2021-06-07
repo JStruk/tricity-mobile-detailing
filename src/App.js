@@ -111,20 +111,8 @@ import AboutUs from "./pages/AboutUs";
 import Pricing from "./pages/Pricing";
 import Hero from "components/hero/BackgroundAsImage.js";
 import { NavLink, NavLinks, PrimaryLink } from "./components/headers/light";
-
-const navLinks = [
-  <NavLinks key={1}>
-    <NavLink href="about">
-      About
-    </NavLink>
-    <NavLink href="pricing">
-      Pricing
-    </NavLink>
-    <PrimaryLink href="/#">
-      Contact
-    </PrimaryLink>
-  </NavLinks>,
-];
+import Portfolio from "./pages/Portfolio";
+import { navLinks } from "./pages/navLinks";
 
 export default function App() {
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
@@ -139,6 +127,9 @@ export default function App() {
         </Route>
         <Route path="/pricing">
           <Pricing links={navLinks} />
+        </Route>
+        <Route path="/portfolio">
+          <Portfolio links={navLinks} />
         </Route>
         <Route path="/thank-you">
           <ThankYouPage />

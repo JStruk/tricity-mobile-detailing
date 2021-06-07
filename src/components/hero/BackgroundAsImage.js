@@ -6,6 +6,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import Header, { NavLink, NavLinks, PrimaryLink, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 import ResponsiveVideoEmbed from "../../helpers/ResponsiveVideoEmbed.js";
 import TwoColumnWithImage from "../testimonials/TwoColumnWithImage";
+import { navLinks } from "../../pages/navLinks";
 
 const StyledHeader = styled(Header)`
   ${tw`pt-8 max-w-none`}
@@ -59,20 +60,6 @@ const StyledResponsiveVideoEmbed = styled(ResponsiveVideoEmbed)`
 const MainDiv = tw.div`items-center justify-center flex h-screen text-white`
 
 export default () => {
-  const navLinks = [
-    <NavLinks key={1}>
-      <NavLink href="about">
-        About
-      </NavLink>
-      <NavLink href="pricing">
-        Pricing
-      </NavLink>
-      <PrimaryLink href="/#">
-        Contact
-      </PrimaryLink>
-    </NavLinks>,
-  ];
-
   return (
     <Container>
       <OpacityOverlay />
@@ -84,13 +71,6 @@ export default () => {
             <span>Full-Service mobile car detailing. Bring your vehicle back to brand-new condition without ever leaving your own home.</span>
           </div>
         </MainDiv>
-            {/*<Heading >*/}
-            {/*  <span>Tri-City Mobile Detailing</span>*/}
-            {/*  <Tester className="border border-black" >Test </Tester>*/}
-            {/*  <br />*/}
-            {/*  /!*<SlantedBackground>Marketing Team.</SlantedBackground>*!/*/}
-            {/*</Heading>*/}
-            {/*<PrimaryAction>Read Customer Stories</PrimaryAction>*/}
       </HeroContainer>
     </Container>
   );
