@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 
 import Header, { NavLink, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
-import ResponsiveVideoEmbed from "../../helpers/ResponsiveVideoEmbed.js";
 import { navLinks } from "../../pages/navLinks";
 
 const StyledHeader = styled(Header)`
@@ -31,16 +30,6 @@ const Heading = styled.h1`
   ${tw`text-3xl text-center sm:text-4xl lg:text-5xl xl:text-6xl font-black  leading-none`}
   span {
     ${tw`inline-block mt-2`}
-  }
-`;
-
-
-const StyledResponsiveVideoEmbed = styled(ResponsiveVideoEmbed)`
-  padding-bottom: 56.25% !important;
-  padding-top: 0px !important;
-  ${tw`rounded`}
-  iframe {
-    ${tw`rounded bg-black shadow-xl`}
   }
 `;
 
