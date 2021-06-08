@@ -31,9 +31,6 @@ export default function App() {
         <Route path="/contact-us">
           <TwoColContactUsWithIllustrationFullForm links={navLinks}/>
         </Route>
-        <Route path="/thank-you">
-          <ThankYouPage />
-        </Route>
         <Route path="/">
           <AgencyLandingPage/>
         </Route>

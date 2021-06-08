@@ -4,6 +4,7 @@ import tw from "twin.macro";
 import Header from "components/headers/light.js";
 import MainFeature1 from "components/features/TwoColWithButton.js";
 import TeamCardGrid from "components/cards/ProfileThreeColGrid.js";
+import { SEOComponent } from "../components/SEOComponent";
 
 const Subheading = tw.span`uppercase tracking-wider text-sm`;
 
@@ -29,6 +30,7 @@ export default ({ links }) => {
         textOnLeft={false}
       />
       <TeamCardGrid/>
+        <SEOComponent title="About Us" description="Our mission to serve you and our team members"/>
     </AnimationRevealPage>
   );
 };

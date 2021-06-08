@@ -13,7 +13,7 @@ import gallery7 from 'images/portfolioGallery/gallery7.jpg'
 import gallery8 from 'images/portfolioGallery/gallery8.jpg'
 import gallery10 from 'images/portfolioGallery/gallery10.jpg'
 import gallery11 from 'images/portfolioGallery/gallery11.jpg'
-import gallery12 from 'images/portfolioGallery/gallery12.mp4'
+import { SEOComponent } from "../components/SEOComponent";
 
 const images = [
     {
@@ -107,6 +107,7 @@ export default ({links}) => {
             <GalleryDiv>
                 <ImageGallery items={ images }/>
             </GalleryDiv>
+            <SEOComponent title="Portfolio" description="Check out some of our previous work for our clients"/>
         </AnimationRevealPage>
     );
 };

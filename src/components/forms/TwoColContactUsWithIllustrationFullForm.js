@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
@@ -9,6 +9,7 @@ import AnimationRevealPage from "../../helpers/AnimationRevealPage";
 import Header from "../headers/light";
 import { send } from 'emailjs-com';
 import { useForm } from "react-hook-form";
+import { SEOComponent } from "../SEOComponent";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -120,6 +121,7 @@ export default ({
                     </TextColumn>
                 </TwoColumn>
             </Container>
+            <SEOComponent title="Contact Us" description="Contact us to book your appointment today!"/>
         </AnimationRevealPage>
     );
 }
