@@ -24,7 +24,7 @@ export default ({ links }) => {
         heading=""
         buttonRounded={false}
         primaryButtonText="Contact Us"
-        description="Having to wait and arrange a pickup time from your detailing appoiontment is half the hassle, with Tri City Mobile Detailing we eliminate the hassle completely by coming to you. We use industry leading car care products, high quality equipment and our years of detailing knowledge to deliver you a convenient high end service."
+        description="Having to wait and arrange a pickup time from your detailing appointment is half the hassle, with Tri City Mobile Detailing we eliminate the hassle completely by coming to you. We use industry leading car care products, high quality equipment and our years of detailing knowledge to deliver you a convenient high end service."
         imageSrc="https://res.cloudinary.com/detailing-jstruk-com/image/upload/v1623093160/IMG_2557_n0t7ns.jpg"
         textOnLeft={false}
       />
