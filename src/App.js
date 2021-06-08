@@ -11,6 +11,9 @@ import AboutUs from "./pages/AboutUs";
 import Pricing from "./pages/Pricing";
 import Portfolio from "./pages/Portfolio";
 import { navLinks } from "./pages/navLinks";
+import SimpleContactUs from "./components/forms/SimpleContactUs";
+import TwoColContactUsWithIllustration from "./components/forms/TwoColContactUsWithIllustration";
+import TwoColContactUsWithIllustrationFullForm from "./components/forms/TwoColContactUsWithIllustrationFullForm";
 
 export default function App() {
   return (
@@ -24,6 +27,9 @@ export default function App() {
         </Route>
         <Route path="/portfolio">
           <Portfolio links={navLinks} />
+        </Route>
+        <Route path="/contact-us">
+          <TwoColContactUsWithIllustrationFullForm links={navLinks}/>
         </Route>
         <Route path="/thank-you">
           <ThankYouPage />

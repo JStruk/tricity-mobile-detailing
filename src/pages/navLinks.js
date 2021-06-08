@@ -12,8 +12,8 @@ export const navLinks = [
         <NavLink href="portfolio">
             Portfolio
         </NavLink>
-        <PrimaryLink href="/#">
-            Contact
+        <PrimaryLink href="/contact-us">
+            Contact Us
         </PrimaryLink>
     </NavLinks>,
 ];
