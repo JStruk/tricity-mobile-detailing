@@ -91,7 +91,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
   const defaultLogoLink = (
     <LogoLink href="/">
       <img src={logo} alt="logo" style={{width: 120, height:120}} />
-      Tri City Mobile Detailing
+      Chromax Mobile Detailing
     </LogoLink>
   );
 

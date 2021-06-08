@@ -53,7 +53,7 @@ export default ({
 
     const onSubmit = async (e) => {
         const emailParams = {
-            to_name: 'Tri City Mobile Detailing',
+            to_name: 'Chromax Mobile Detailing',
             from_name: e.from_name,
             reply_to: e.email,
             phone: e.phone,
