@@ -28,9 +28,7 @@ export default ({ links }) => {
         imageSrc="https://res.cloudinary.com/detailing-jstruk-com/image/upload/v1623093160/IMG_2557_n0t7ns.jpg"
         textOnLeft={false}
       />
-      <TeamCardGrid
-        subheading={<Subheading>Our Team</Subheading>}
-      />
+      <TeamCardGrid/>
     </AnimationRevealPage>
   );
 };
