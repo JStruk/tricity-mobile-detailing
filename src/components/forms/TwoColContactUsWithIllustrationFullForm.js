@@ -10,6 +10,8 @@ import Header from "../headers/light";
 import { send } from 'emailjs-com';
 import { useForm } from "react-hook-form";
 import { SEOComponent } from "../SEOComponent";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -69,6 +71,7 @@ export default ({
                 emailParams,
                 process.env.REACT_APP_EMAILJS_USER_ID
             )
+            toast.success("Email sent! We will be in touch ASAP!",)
         } catch (e) {
             console.log('Error sending email: ', e);
         }
@@ -121,6 +124,7 @@ export default ({
                     </TextColumn>
                 </TwoColumn>
             </Container>
+            <ToastContainer/>
             <SEOComponent title="Contact Us" description="Contact us to book your appointment today!"/>
         </AnimationRevealPage>
     );
