@@ -45,7 +45,7 @@ export default () => {
         <StyledHeader links={navLinks} />
         <MainDiv>
           <div>
-            <Heading>Chromax Mobile Detailing</Heading>
+            <Heading>Top Shelf Mobile Detailing</Heading>
             <SubHeadingDiv><span>Full-Service mobile car detailing. Bring your vehicle back to brand-new condition without ever leaving your own home.</span></SubHeadingDiv>
           </div>
         </MainDiv>
