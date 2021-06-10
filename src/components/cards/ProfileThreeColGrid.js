@@ -51,7 +51,7 @@ export default ({
     {
       imageSrc: "https://res.cloudinary.com/detailing-jstruk-com/image/upload/v1623088460/Warlord_MUG_SHOT_dcoqiu.jpg",
       position: "Co Founder",
-      name: "Tyler Warchild",
+      name: "Tyler Warford",
       links: [],
     },
   ]

@@ -13,7 +13,6 @@ export default ({links}) => {
                 <Header links={ links }/>
                 <InteriorPricing/>
                 <ExteriorPricing/>
-                <Footer/>
                 <SEOComponent title="Pricing" description="The packages and services we offer to your driveway"/>
             </AnimationRevealPage>
             <Footer/>

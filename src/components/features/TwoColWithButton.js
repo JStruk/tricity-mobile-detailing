@@ -45,7 +45,7 @@ export default ({
                     subheading,
                     description,
                     primaryButtonText = "Learn More",
-                    primaryButtonUrl = "https://google.com",
+                    primaryButtonUrl = "/contact-us",
                     imageSrc = TeamIllustrationSrc,
                     buttonRounded = true,
                     imageRounded = true,

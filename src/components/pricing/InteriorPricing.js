@@ -1,11 +1,12 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { SectionDescription } from "components/misc/Typography.js";
-import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
+import { PrimaryButton, PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
+
 const HeaderContainer = tw.div`w-full flex flex-col items-center`;
 const Subheading = tw(SubheadingBase)`mb-4`;
 const Heading = tw(SectionHeading)`w-full`;
@@ -13,110 +14,114 @@ const Description = tw(SectionDescription)`w-full text-center`;
 
 const PlansContainer = tw.div`flex justify-center flex-col md:flex-row items-center md:items-start relative`;
 const Plan = styled.div`
-  ${tw`w-full max-w-72 mt-16 md:mr-12 md:last:mr-0 text-center px-8 rounded-lg relative text-gray-900 bg-white flex flex-col shadow-raised`}
+  ${ tw`w-full max-w-72 mt-16 md:mr-12 md:last:mr-0 text-center px-8 rounded-lg relative text-gray-900 bg-white flex flex-col shadow-raised` }
 
-  ${props =>
+  ${ props =>
     props.featured &&
     css`
-      ${tw`border-2 border-gray-200 shadow-none`}
-    `}
+      ${ tw`border-2 border-gray-200 shadow-none` }
+    ` }
 `;
 
 const PlanHeader = styled.div`
-  ${tw`flex flex-col leading-relaxed py-8 -mx-8 bg-gray-100 rounded-t-lg`}
+  ${ tw`flex flex-col leading-relaxed py-8 -mx-8 bg-gray-100 rounded-t-lg` }
   .name {
-    ${tw`font-bold text-xl`}
+    ${ tw`font-bold text-xl` }
   }
   .price {
-    ${tw`font-bold text-4xl sm:text-5xl my-1`}
+    ${ tw`font-bold text-4xl sm:text-5xl my-1` }
   }
   .slash {
-    ${tw`text-xl text-gray-500`}
+    ${ tw`text-xl text-gray-500` }
   }
   .duration {
-    ${tw`lowercase text-gray-500 font-medium tracking-widest`}
+    ${ tw`lowercase text-gray-500 font-medium tracking-widest` }
   }
   .mainFeature {
-    ${tw`text-gray-500 text-sm font-medium tracking-wide`}
+    ${ tw`text-gray-500 text-sm font-medium tracking-wide` }
   }
 `;
 const PlanFeatures = styled.div`
-  ${tw`flex flex-col -mx-8 px-8 py-8 flex-1 text-sm`}
+  ${ tw`flex flex-col -mx-8 px-8 py-8 flex-1 text-sm` }
   .feature {
-    ${tw`mt-5 first:mt-0 font-semibold text-gray-500`}
+    ${ tw`mt-5 first:mt-0 font-semibold text-gray-500` }
   }
 `;
 
 const PlanAction = tw.div`px-4 pb-8`;
 const BuyNowButton = styled(PrimaryButtonBase)`
-  ${tw`rounded-full tracking-wider py-4 w-full text-sm hover:shadow-xl transform hocus:translate-x-px hocus:-translate-y-px focus:shadow-outline`}
+  ${ tw`rounded-full tracking-wider py-4 w-full text-sm hover:shadow-xl transform hocus:translate-x-px hocus:-translate-y-px focus:shadow-outline` }
 `;
 
 export default ({
-  subheading = "We offer our interior and exterior services in various packages and levels. Something for everyone!",
-  heading = "Interior Package Pricing",
-  description = "",
-  plans = null,
-  primaryButtonText = "Buy Now",
-}) => {
-  const defaultPlans = [
-    {
-      name: "Bronze",
-      durationPrices: ["$100"],
-      mainFeature: "Basic interior detail",
-      features: ["Interior Vacuum", "Complete wipe down", "Complete dusting", "Streak-free glass cleaning"]
-    },
-    {
-      name: "Silver",
-      durationPrices: ["$120"],
-      mainFeature: "Interior detail with shampoo",
-      features: ["Bronze package plus:", "Steam clean", "Shampoo carpet and upholstery", "Deodorize"]
-    },
-    {
-      name: "Gold",
-      durationPrices: ["$160"],
-      mainFeature: "Silver package plus:",
-      features: ["Silver+Bronze packages plus:", "Dash and trim dressing", "3 stage leather treatment to", "have leather looking brand new"],
-    }
-  ];
+                    subheading = "We offer our interior and exterior services in various packages and levels. Something for everyone!",
+                    heading = "Interior Package Pricing",
+                    description = "",
+                    plans = null,
+                    primaryButtonText = "Book Now",
+                    buttonRounded = true,
+                    primaryButtonUrl = '/contact-us'
+                }) => {
+    const defaultPlans = [
+        {
+            name: "Bronze",
+            durationPrices: ["$100"],
+            mainFeature: "Basic interior detail",
+            features: ["Interior Vacuum", "Complete wipe down", "Complete dusting", "Streak-free glass cleaning"]
+        },
+        {
+            name: "Silver",
+            durationPrices: ["$120"],
+            mainFeature: "Interior detail with shampoo",
+            features: ["Bronze package plus:", "Steam clean", "Shampoo carpet and upholstery", "Deodorize"]
+        },
+        {
+            name: "Gold",
+            durationPrices: ["$160"],
+            mainFeature: "Silver package plus:",
+            features: ["Silver+Bronze packages plus:", "Dash and trim dressing", "3 stage leather treatment to", "have leather looking brand new"],
+        }
+    ];
 
-  if (!plans) plans = defaultPlans;
+    if (!plans) plans = defaultPlans;
 
-  const [activeDurationIndex] = useState(0);
+    const [activeDurationIndex] = useState(0);
 
-  return (
-    <Container>
-      <ContentWithPaddingXl>
-        <HeaderContainer>
-          {subheading && <Subheading>{subheading}</Subheading>}
-          <Heading>{heading}</Heading>
-          {description && <Description>{description}</Description>}
-        </HeaderContainer>
-        <PlansContainer>
-          {plans.map((plan, index) => (
-            <Plan key={index} featured={plan.featured}>
-              <PlanHeader>
+    return (
+        <Container>
+            <ContentWithPaddingXl>
+                <HeaderContainer>
+                    { subheading && <Subheading>{ subheading }</Subheading> }
+                    <Heading>{ heading }</Heading>
+                    { description && <Description>{ description }</Description> }
+                </HeaderContainer>
+                <PlansContainer>
+                    { plans.map((plan, index) => (
+                        <Plan key={ index } featured={ plan.featured }>
+                            <PlanHeader>
                 <span className="priceAndDuration">
-                  <span className="price">{plan.durationPrices[activeDurationIndex]}</span>
+                  <span className="price">{ plan.durationPrices[activeDurationIndex] }</span>
                   <span className="slash"> / </span>
                 </span>
-                <span className="name">{plan.name}</span>
-                <span className="mainFeature">{plan.mainFeature}</span>
-              </PlanHeader>
-              <PlanFeatures>
-                {plan.features.map((feature, index) => (
-                  <span key={index} className="feature">
-                    {feature}
+                                <span className="name">{ plan.name }</span>
+                                <span className="mainFeature">{ plan.mainFeature }</span>
+                            </PlanHeader>
+                            <PlanFeatures>
+                                { plan.features.map((feature, index) => (
+                                    <span key={ index } className="feature">
+                    { feature }
                   </span>
-                ))}
-              </PlanFeatures>
-              <PlanAction>
-                <BuyNowButton>{primaryButtonText}</BuyNowButton>
-              </PlanAction>
-            </Plan>
-          ))}
-        </PlansContainer>
-      </ContentWithPaddingXl>
-    </Container>
-  );
+                                )) }
+                            </PlanFeatures>
+                            <PlanAction>
+                                <PrimaryButton buttonRounded={ buttonRounded } as="a" href={ primaryButtonUrl }>
+                                    { primaryButtonText }
+                                </PrimaryButton>
+                            </PlanAction>
+                        </Plan>
+                    )) }
+                </PlansContainer>
+            </ContentWithPaddingXl>
+        </Container>
+    );
 };
