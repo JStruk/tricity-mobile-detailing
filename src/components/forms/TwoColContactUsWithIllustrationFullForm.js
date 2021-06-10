@@ -12,6 +12,7 @@ import { useForm } from "react-hook-form";
 import { SEOComponent } from "../SEOComponent";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from "../footers/Footer";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -80,53 +81,56 @@ export default ({
     };
 
     return (
-        <AnimationRevealPage>
-            <Header links={ links }/>
-            <Container>
-                <TwoColumn>
-                    <ImageColumn>
-                        <Image imageSrc={ warchild } />
-                    </ImageColumn>
-                    <TextColumn textOnLeft={ textOnLeft }>
-                        <TextContent>
-                            { subheading && <Subheading>{ subheading }</Subheading> }
-                            <Heading>{ heading }</Heading>
-                            { description && <Description>{ description }</Description> }
-                            <Form action={ formAction } method={ formMethod } onSubmit={ handleSubmit(onSubmit) }>
-                                <Input type="text" name="from_name" placeholder="Full Name"
-                                       { ...register("from_name", {required: true}) }
-                                />
-                                { errors.from_name && <span>What's your name?</span> }
+        <>
+            <AnimationRevealPage>
+                <Header links={ links }/>
+                <Container>
+                    <TwoColumn>
+                        <ImageColumn>
+                            <Image imageSrc={ warchild }/>
+                        </ImageColumn>
+                        <TextColumn textOnLeft={ textOnLeft }>
+                            <TextContent>
+                                { subheading && <Subheading>{ subheading }</Subheading> }
+                                <Heading>{ heading }</Heading>
+                                { description && <Description>{ description }</Description> }
+                                <Form action={ formAction } method={ formMethod } onSubmit={ handleSubmit(onSubmit) }>
+                                    <Input type="text" name="from_name" placeholder="Full Name"
+                                           { ...register("from_name", {required: true}) }
+                                    />
+                                    { errors.from_name && <span>What's your name?</span> }
 
-                                <Input type="email" name="reply_to" placeholder="Your Email Address"
-                                       { ...register("email", {required: true}) }
-                                />
-                                { errors.email && <span>Your Email is required</span> }
+                                    <Input type="email" name="reply_to" placeholder="Your Email Address"
+                                           { ...register("email", {required: true}) }
+                                    />
+                                    { errors.email && <span>Your Email is required</span> }
 
-                                <Input type="text" name="phone" placeholder="Phone Number"
-                                       { ...register("phone", {required: true}) }
-                                />
-                                { errors.phone && <span> Let us know your phone number so we can get in touch ASAP </span> }
+                                    <Input type="text" name="phone" placeholder="Phone Number"
+                                           { ...register("phone", {required: true}) }
+                                    />
+                                    { errors.phone &&
+                                    <span> Let us know your phone number so we can get in touch ASAP </span> }
 
-                                <Input type="text" name="subject" placeholder="Package(s)"
-                                       { ...register("subject", {required: true}) }
-                                />
-                                { errors.subject && <span>Briefly specify which package you'd like or the reason for
+                                    <Input type="text" name="subject" placeholder="Package(s)"
+                                           { ...register("subject", {required: true}) }
+                                    />
+                                    { errors.subject && <span>Briefly specify which package you'd like or the reason for
                                 your email</span> }
 
-                                <Textarea name="message" placeholder="Your Message Here"
-                                          { ...register("message", {required: true}) }
-                                />
-                                { errors.message && <span>This field is required</span> }
-                                <SubmitButton type="submit">{ submitButtonText }</SubmitButton>
-                            </Form>
-                        </TextContent>
-                    </TextColumn>
-                </TwoColumn>
-            </Container>
-            <ToastContainer/>
-            <SEOComponent title="Contact Us" description="Contact us to book your appointment today!"/>
-        </AnimationRevealPage>
+                                    <Textarea name="message" placeholder="Your Message Here"
+                                              { ...register("message", {required: true}) }
+                                    />
+                                    { errors.message && <span>This field is required</span> }
+                                    <SubmitButton type="submit">{ submitButtonText }</SubmitButton>
+                                </Form>
+                            </TextContent>
+                        </TextColumn>
+                    </TwoColumn>
+                </Container>
+                <ToastContainer/>
+                <SEOComponent title="Contact Us" description="Contact us to book your appointment today!"/>
+            </AnimationRevealPage>
+            <Footer/>
+        </>
     );
 }
-;

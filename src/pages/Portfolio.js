@@ -14,6 +14,7 @@ import gallery8 from 'images/portfolioGallery/gallery8.jpg'
 import gallery10 from 'images/portfolioGallery/gallery10.jpg'
 import gallery11 from 'images/portfolioGallery/gallery11.jpg'
 import { SEOComponent } from "../components/SEOComponent";
+import Footer from "../components/footers/Footer";
 
 const images = [
     {
@@ -95,19 +96,22 @@ const HeadingDiv = tw.div`mt-12`;
 
 export default ({links}) => {
     return (
-        <AnimationRevealPage>
-            <Header links={ links }/>
-            <HeadingDiv>
-                <SectionHeading>Portfolio</SectionHeading>
-            </HeadingDiv>
-            <SubHeadingDiv>
-                <Subheading>Check out the pictures below to see some of our work from our satisfied
-                    customers</Subheading>
-            </SubHeadingDiv>
-            <GalleryDiv>
-                <ImageGallery items={ images }/>
-            </GalleryDiv>
-            <SEOComponent title="Portfolio" description="Check out some of our previous work for our clients"/>
-        </AnimationRevealPage>
+        <>
+            <AnimationRevealPage>
+                <Header links={ links }/>
+                <HeadingDiv>
+                    <SectionHeading>Portfolio</SectionHeading>
+                </HeadingDiv>
+                <SubHeadingDiv>
+                    <Subheading>Check out the pictures below to see some of our work from our satisfied
+                        customers</Subheading>
+                </SubHeadingDiv>
+                <GalleryDiv>
+                    <ImageGallery items={ images }/>
+                </GalleryDiv>
+                <SEOComponent title="Portfolio" description="Check out some of our previous work for our clients"/>
+            </AnimationRevealPage>
+            <Footer/>
+        </>
     );
 };
