@@ -12,7 +12,7 @@ import { useForm } from "react-hook-form";
 import { SEOComponent } from "../SEOComponent";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Footer from "../footers/Footer";
+import Footer from "../Footer";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;

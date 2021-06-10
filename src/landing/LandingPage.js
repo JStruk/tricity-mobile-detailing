@@ -4,7 +4,7 @@ import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Hero from "components/hero/BackgroundAsImage.js";
 import MainFeature from "components/features/TwoColSingleFeatureWithStats2.js";
 import { SEOComponent } from "../components/SEOComponent";
-import Footer from "../components/footers/Footer";
+import Footer from "../components/Footer";
 
 const HighlightedText = tw.span`bg-primary-500 mr-4 text-gray-100 px-4 transform -skew-x-12 inline-block`;
 const Description = tw.span`inline-block mt-8`;

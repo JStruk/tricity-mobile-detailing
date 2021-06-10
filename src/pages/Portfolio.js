@@ -14,7 +14,7 @@ import gallery8 from 'images/portfolioGallery/gallery8.jpg'
 import gallery10 from 'images/portfolioGallery/gallery10.jpg'
 import gallery11 from 'images/portfolioGallery/gallery11.jpg'
 import { SEOComponent } from "../components/SEOComponent";
-import Footer from "../components/footers/Footer";
+import Footer from "../components/Footer";
 
 const images = [
     {

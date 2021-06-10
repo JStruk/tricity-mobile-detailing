@@ -2,13 +2,13 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import AnimationRevealPage from "helpers/AnimationRevealPage.js"
 
-import EventLandingPage from "demos/EventLandingPage.js";
-import HotelTravelLandingPage from "demos/HotelTravelLandingPage.js";
-import AgencyLandingPage from "demos/LandingPage.js";
-import SaaSProductLandingPage from "demos/SaaSProductLandingPage.js";
-import RestaurantLandingPage from "demos/RestaurantLandingPage.js";
-import ServiceLandingPage from "demos/ServiceLandingPage.js";
-import HostingCloudLandingPage from "demos/HostingCloudLandingPage.js";
+import EventLandingPage from "src/landing/EventLandingPage.js";
+import HotelTravelLandingPage from "src/landing/HotelTravelLandingPage.js";
+import AgencyLandingPage from "src/landing/LandingPage.js";
+import SaaSProductLandingPage from "src/landing/SaaSProductLandingPage.js";
+import RestaurantLandingPage from "src/landing/RestaurantLandingPage.js";
+import ServiceLandingPage from "src/landing/ServiceLandingPage.js";
+import HostingCloudLandingPage from "src/landing/HostingCloudLandingPage.js";
 
 import EventLandingPageImageSrc from "images/demo/EventLandingPage.jpeg";
 import HotelTravelLandingPageImageSrc from "images/demo/HotelTravelLandingPage.jpeg";
@@ -97,7 +97,7 @@ import SimpleFiveColumnFooter from "components/footers/SimpleFiveColumn.js";
 import FiveColumnWithInputFormFooter from "components/footers/FiveColumnWithInputForm.js";
 import FiveColumnWithBackgroundFooter from "components/footers/FiveColumnWithBackground.js";
 import FiveColumnDarkFooter from "components/footers/FiveColumnDark.js";
-import MiniCenteredFooter from "components/footers/MiniCenteredFooter.js";
+import MiniCenteredFooter from "components/Footer.js";
 
 
 export const components = {

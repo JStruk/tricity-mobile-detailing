@@ -4,7 +4,7 @@ import Header from "components/headers/light.js";
 import InteriorPricing from "components/pricing/InteriorPricing";
 import ExteriorPricing from "../components/pricing/ExteriorPricing";
 import { SEOComponent } from "../components/SEOComponent";
-import Footer from "../components/footers/Footer";
+import Footer from "../components/Footer";
 
 export default ({links}) => {
     return (

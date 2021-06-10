@@ -5,7 +5,7 @@ import Header from "components/headers/light.js";
 import MainFeature1 from "components/features/TwoColWithButton.js";
 import TeamCardGrid from "components/cards/ProfileThreeColGrid.js";
 import { SEOComponent } from "../components/SEOComponent";
-import Footer from "../components/footers/Footer";
+import Footer from "../components/Footer";
 
 const Subheading = tw.span`uppercase tracking-wider text-sm`;
 
