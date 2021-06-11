@@ -17,8 +17,8 @@ ReactGA.initialize(process.env.REACT_APP_GA_TRACKING_ID);
 const history = createBrowserHistory();
 
 history.listen(location => {
-  ReactGA.set({ page: location.pathname });
-  ReactGA.pageview(location.pathname);
+  ReactGA.set({ page: window.location.pathname });
+  ReactGA.pageview(window.location.pathname);
 });
 
 export default function App() {
