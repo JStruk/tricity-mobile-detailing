@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { SectionDescription } from "components/misc/Typography.js";
-import { PrimaryButton, PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
+import { PrimaryButton } from "components/misc/Buttons.js";
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
 
 const HeaderContainer = tw.div`w-full flex flex-col items-center`;
@@ -49,9 +49,6 @@ const PlanFeatures = styled.div`
 `;
 
 const PlanAction = tw.div`px-4 pb-8`;
-const BuyNowButton = styled(PrimaryButtonBase)`
-  ${ tw`rounded-full tracking-wider py-4 w-full text-sm hover:shadow-xl transform hocus:translate-x-px hocus:-translate-y-px focus:shadow-outline` }
-`;
 
 export default ({
                     subheading = "",
