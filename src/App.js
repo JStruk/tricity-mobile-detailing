@@ -9,10 +9,21 @@ import Pricing from "./pages/Pricing";
 import Portfolio from "./pages/Portfolio";
 import { navLinks } from "./pages/navLinks";
 import TwoColContactUsWithIllustrationFullForm from "./components/forms/TwoColContactUsWithIllustrationFullForm";
+import { createBrowserHistory } from 'history';
+import ReactGA from "react-ga";
+
+ReactGA.initialize(process.env.REACT_APP_GA_TRACKING_ID);
+
+const history = createBrowserHistory();
+
+history.listen(location => {
+  ReactGA.set({ page: location.pathname });
+  ReactGA.pageview(location.pathname);
+});
 
 export default function App() {
   return (
-    <Router>
+    <Router history={history}>
       <Switch>
         <Route path="/about">
           <AboutUs links={navLinks} />
