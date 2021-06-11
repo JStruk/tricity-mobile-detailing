@@ -3,7 +3,7 @@ import "styles/globalStyles.css";
 import React from "react";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import AgencyLandingPage from "./landing/LandingPage";
+import LandingPage from "./landing/LandingPage";
 import AboutUs from "./pages/AboutUs";
 import Pricing from "./pages/Pricing";
 import Portfolio from "./pages/Portfolio";
@@ -38,7 +38,7 @@ export default function App() {
           <TwoColContactUsWithIllustrationFullForm links={navLinks}/>
         </Route>
         <Route path="/">
-          <AgencyLandingPage/>
+          <LandingPage/>
         </Route>
       </Switch>
     </Router>

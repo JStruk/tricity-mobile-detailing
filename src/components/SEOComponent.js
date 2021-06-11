@@ -3,8 +3,8 @@ import SEO from "react-seo-component";
 
 export function SEOComponent({ title, description, path }) {
     return <SEO
-        title="Home Page"
-        titleTemplate={ `${ title } - Top Shelf Mobile Detailing` }
+        title={ title }
+        titleTemplate={ 'Top Shelf Mobile Detailing' }
         titleSeparator={ `-` }
         description={description}
         pathname={ `https://www.detailing.jstruk.com/${path}` }
