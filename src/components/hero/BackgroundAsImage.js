@@ -39,7 +39,7 @@ const SubHeadingDiv = tw.div`text-2xl text-center`
 
 export default () => {
   return (
-    <Container>
+    <Container alt="Top Shelf Mobile Detailing Home Page">
       <OpacityOverlay />
       <HeroContainer>
         <StyledHeader links={navLinks} />

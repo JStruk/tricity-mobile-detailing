@@ -19,55 +19,75 @@ import Footer from "../components/Footer";
 const images = [
     {
         original: gallery1,
+        originalAlt: 'Full interior detail on a Tesla by Top Shelf Mobile Detailing',
         thumbnail: gallery1,
+        thumbnailAlt: 'Full interior detail on a Tesla by Top Shelf Mobile Detailing',
         description: 'Full interior detail'
     },
     {
         original: gallery2,
+        originalAlt: 'Full interior detail on a Tesla by Top Shelf Mobile Detailing',
         thumbnail: gallery2,
-        description: 'Full interior detail on this Tesla'
+        description: 'Full interior detail on this Tesla',
+        thumbnailAlt: 'Full interior detail on a Tesla by Top Shelf Mobile Detailing',
     },
     {
         original: gallery4,
+        originalAlt: 'Full interior detail on a Tesla by Top Shelf Mobile Detailing',
         thumbnail: gallery4,
-        description: 'Full interior detail on this Tesla'
+        description: 'Full interior detail on this Tesla',
+        thumbnailAlt: 'Full interior detail on a Tesla by Top Shelf Mobile Detailing',
     },
     {
         original: gallery5,
+        originalAlt: 'Full interior detail on a Tesla by Top Shelf Mobile Detailing',
         thumbnail: gallery5,
-        description: 'Full interior detail on this Tesla'
+        description: 'Full interior detail on this Tesla',
+        thumbnailAlt: 'Full interior detail on a Tesla by Top Shelf Mobile Detailing',
     },
     {
         original: gallery6,
+        originalAlt: 'Full interior detail on a Tesla by Top Shelf Mobile Detailing',
         thumbnail: gallery6,
-        description: 'Full interior detail on this Tesla'
+        description: 'Full interior detail on this Tesla',
+        thumbnailAlt: 'Full interior detail on a Tesla by Top Shelf Mobile Detailing',
     },
     {
         original: gallery7,
+        originalAlt: 'Platinum exterior detail on a Subaru WRX STI by Top Shelf Mobile Detailing',
         thumbnail: gallery7,
-        description: 'Platinum exterior package on a Subaru WRX STI'
+        description: 'Platinum exterior package on a Subaru WRX STI',
+        thumbnailAlt: 'Platinum exterior detail on a Subaru WRX STI by Top Shelf Mobile Detailing',
     },
     {
         original: gallery8,
+        originalAlt: 'Platinum exterior detail on a Subaru WRX STI by Top Shelf Mobile Detailing',
         thumbnail: gallery8,
-        description: 'Platinum exterior package on a Subaru WRX STI'
+        description: 'Platinum exterior package on a Subaru WRX STI',
+        thumbnailAlt: 'Platinum exterior detail on a Subaru WRX STI by Top Shelf Mobile Detailing',
     },
     {
         original: gallery10,
+        originalAlt: 'Platinum exterior detail on a 15 year old Acura RSX by Top Shelf Mobile Detailing',
         thumbnail: gallery10,
-        description: 'Platinum exterior package on a 15 year old Acura RSX'
+        description: 'Platinum exterior package on a 15 year old Acura RSX',
+        thumbnailAlt: 'Platinum exterior detail on a 15 year old Acura RSX by Top Shelf Mobile Detailing'
     },
     {
         original: gallery11,
+        originalAlt: 'Platinum exterior detail on a 15 year old Acura RSX by Top Shelf Mobile Detailing',
         thumbnail: gallery11,
-        description: 'Platinum exterior package on a 15 year old Acura RSX'
+        description: 'Platinum exterior package on a 15 year old Acura RSX',
+        thumbnailAlt: 'Platinum exterior detail on a 15 year old Acura RSX by Top Shelf Mobile Detailing',
     },
     {
         original: gallery11,
+        originalAlt: 'Platinum exterior detail on a 15 year old Acura RSX by Top Shelf Mobile Detailing (video)',
         thumbnail: gallery11,
+        thumbnailAlt: 'Platinum exterior detail on a 15 year old Acura RSX by Top Shelf Mobile Detailing (video)',
         embedUrl: 'https://www.youtube.com/embed/nZPX7v17Bl8',
         description: 'rut',
-        renderItem: renderVideo.bind(this)
+        renderItem: renderVideo.bind(this),
     },
 ];
 

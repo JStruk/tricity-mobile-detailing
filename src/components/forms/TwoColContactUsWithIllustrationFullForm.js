@@ -80,6 +80,8 @@ export default ({
         reset();
     };
 
+    const altText = 'Tyler Warford hard at work detailing his own Nissan 370Z. Complete the form to get in touch with us and book an appointment. Thank you for your interest in Top Shelf Mobile Detailing';
+
     return (
         <>
             <AnimationRevealPage>
@@ -87,7 +89,7 @@ export default ({
                 <Container>
                     <TwoColumn>
                         <ImageColumn>
-                            <Image imageSrc={ warchild }/>
+                            <Image imageSrc={ warchild } alt={ altText }/>
                         </ImageColumn>
                         <TextColumn textOnLeft={ textOnLeft }>
                             <TextContent>

@@ -54,7 +54,8 @@ export default ({
                     imageCss = null,
                     imageDecoratorBlob = false,
                     imageDecoratorBlobCss = null,
-                    textOnLeft = true
+                    textOnLeft = true,
+                    altText= ""
                 }) => {
     // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
 
@@ -62,7 +63,7 @@ export default ({
         <Container>
             <TwoColumn>
                 <ImageColumn>
-                    <Image css={ imageCss } src={ imageSrc } imageBorder={ imageBorder } imageShadow={ imageShadow }
+                    <Image css={ imageCss } src={ imageSrc } alt={ altText } imageBorder={ imageBorder } imageShadow={ imageShadow }
                            imageRounded={ imageRounded }/>
                     { imageDecoratorBlob && <DecoratorBlob css={ imageDecoratorBlobCss }/> }
                 </ImageColumn>

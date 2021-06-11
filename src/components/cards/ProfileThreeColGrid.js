@@ -47,12 +47,14 @@ export default ({
       position: "Co Founder",
       name: "Cory Kitchen",
       links: [],
+      altText: "Co Founder of Top Shelf Mobile Detailing, Cory Kitchen"
     },
     {
       imageSrc: "https://res.cloudinary.com/detailing-jstruk-com/image/upload/v1623088460/Warlord_MUG_SHOT_dcoqiu.jpg",
       position: "Co Founder",
       name: "Tyler Warford",
       links: [],
+      altText: "Co Founder of Top Shelf Mobile Detailing, Tyler Warford"
     },
   ]
 }) => {
@@ -67,7 +69,7 @@ export default ({
         <Cards>
           {cards.map((card, index) => (
             <Card key={index}>
-              <CardImage imageSrc={card.imageSrc} />
+              <CardImage imageSrc={card.imageSrc} alt={} />
               <CardContent>
                 <span className="position">{card.position}</span>
                 <span className="name">{card.name}</span>
