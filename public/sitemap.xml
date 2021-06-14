@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://www.example.com/foo.html</loc>
-        <lastmod>2018-06-04</lastmod>
+        <loc>https://topshelfmobiledetailing.ca</loc>
+        <lastmod>2021-06-14</lastmod>
     </url>
     <url>
         <loc>https://topshelfmobiledetailing.ca/about</loc>
-        <lastmod>2018-06-04</lastmod>
+        <lastmod>2021-06-14</lastmod>
     </url>
     <url>
         <loc>https://topshelfmobiledetailing.ca/pricing</loc>
-        <lastmod>2018-06-04</lastmod>
+        <lastmod>2021-06-14</lastmod>
     </url>
     <url>
         <loc>https://topshelfmobiledetailing.ca/portfolio</loc>
-        <lastmod>2018-06-04</lastmod>
+        <lastmod>2021-06-14</lastmod>
     </url>
     <url>
         <loc>https://topshelfmobiledetailing.ca/contact-us</loc>
-        <lastmod>2018-06-04</lastmod>
+        <lastmod>2021-06-14</lastmod>
     </url>
 </urlset>
 
