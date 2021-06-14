@@ -7,7 +7,7 @@ export function SEOComponent({ title, description, path }) {
         titleTemplate={ 'Top Shelf Mobile Detailing' }
         titleSeparator={ `-` }
         description={description}
-        pathname={ `https://www.detailing.jstruk.com/${path}` }
+        pathname={ `https://www.topshelfmobiledetailing.ca/${path}` }
         siteLanguage="en"
         siteLocale="en_ca"
         twitterUsername={ "" }
