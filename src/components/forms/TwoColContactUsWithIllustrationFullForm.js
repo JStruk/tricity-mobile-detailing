@@ -22,6 +22,7 @@ const TextColumn = styled(Column)(props => [
     tw`md:w-7/12 mt-16 md:mt-0`,
     props.textOnLeft ? tw`md:mr-12 lg:mr-16 md:order-first` : tw`md:ml-12 lg:ml-16 md:order-last`
 ]);
+const PhoneNumber = tw.text`font-bold`
 
 const Image = styled.div(props => [
     `background-image: url("${ props.imageSrc }");`,
@@ -46,7 +47,8 @@ export default ({
                     heading = <><span tw="text-primary-500">Get in touch </span>
                         <wbr/>
                         with us to book your appointment today!</>,
-                    description = "Send us a message with the package you would like, preferred day(s) of the week and preferred time. We will be in touch to book your appointment.",
+                    description = "Give us a call or send us a message with the package you would like, preferred day(s) of the week and preferred time. We will be in touch to book your appointment.",
+                    phoneSection = <Description>Call us now at <PhoneNumber>(519) 404-8851</PhoneNumber> to schedule your appointment or contact us using the form below.</Description>,
                     submitButtonText = "Send",
                     formAction = "#",
                     formMethod = "get",
@@ -96,6 +98,7 @@ export default ({
                                 { subheading && <Subheading>{ subheading }</Subheading> }
                                 <Heading>{ heading }</Heading>
                                 { description && <Description>{ description }</Description> }
+                                { phoneSection }
                                 <Form action={ formAction } method={ formMethod } onSubmit={ handleSubmit(onSubmit) }>
                                     <Input type="text" name="from_name" placeholder="Full Name"
                                            { ...register("from_name", {required: true}) }
