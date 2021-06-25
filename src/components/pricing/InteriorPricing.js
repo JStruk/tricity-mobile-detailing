@@ -31,6 +31,12 @@ const PlanHeader = styled.div`
   .price {
     ${ tw`font-bold text-4xl sm:text-5xl my-1` }
   }
+  .truckprice {
+    ${ tw`font-bold text-xs sm:text-xl my-1` }
+  }
+  .otherslash {
+    ${ tw`text-xs text-gray-500 mb-4` }
+  }
   .slash {
     ${ tw`text-xl text-gray-500` }
   }
@@ -49,6 +55,7 @@ const PlanFeatures = styled.div`
 `;
 
 const PlanAction = tw.div`px-4 pb-8`;
+const CenterText = tw.div`text-center mt-1`
 
 export default ({
                     subheading = "We offer our interior and exterior services in various packages and levels. Something for everyone!",
@@ -62,20 +69,20 @@ export default ({
     const defaultPlans = [
         {
             name: "Bronze",
-            durationPrices: ["$100"],
+            durationPrices: ["$100", "$110"],
             mainFeature: "Basic interior detail",
             features: ["Interior Vacuum", "Complete wipe down", "Complete dusting", "Streak-free glass cleaning"]
         },
         {
             name: "Silver",
-            durationPrices: ["$120"],
+            durationPrices: ["$120", "$130"],
             mainFeature: "Interior detail with shampoo",
             features: ["Bronze package plus:", "Steam clean", "Shampoo carpet and upholstery", "Deodorize"]
         },
         {
             name: "Gold",
-            durationPrices: ["$160"],
-            mainFeature: "Silver package plus:",
+            durationPrices: ["$160", "$170"],
+            mainFeature: "Complete interior detail",
             features: ["Silver+Bronze packages plus:", "Dash and trim dressing", "3 stage leather treatment to", "have leather looking brand new"],
         }
     ];
@@ -97,8 +104,12 @@ export default ({
                         <Plan key={ index } featured={ plan.featured }>
                             <PlanHeader>
                 <span className="priceAndDuration">
-                  <span className="price">{ plan.durationPrices[activeDurationIndex] }</span>
-                  <span className="slash"> / </span>
+                    <span className="price">{ plan.durationPrices[activeDurationIndex] }</span>
+                    <span className="slash"> / Cars </span>
+                    <div>
+                       <span className="truckprice">{ plan.durationPrices[1] }</span>
+                       <span className="otherslash"> / Other* </span>
+                    </div>
                 </span>
                                 <span className="name">{ plan.name }</span>
                                 <span className="mainFeature">{ plan.mainFeature }</span>
@@ -118,6 +129,9 @@ export default ({
                         </Plan>
                     )) }
                 </PlansContainer>
+                <CenterText>
+                *Other = Trucks / SUVs / Vans
+                </CenterText>
             </ContentWithPaddingXl>
         </Container>
     );
