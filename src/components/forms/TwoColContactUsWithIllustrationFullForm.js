@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
@@ -22,7 +22,7 @@ const TextColumn = styled(Column)(props => [
     tw`md:w-7/12 mt-16 md:mt-0`,
     props.textOnLeft ? tw`md:mr-12 lg:mr-16 md:order-first` : tw`md:ml-12 lg:ml-16 md:order-last`
 ]);
-const PhoneNumber = tw.text`font-bold`
+const PhoneNumber = tw.span`font-bold`
 
 const Image = styled.div(props => [
     `background-image: url("${ props.imageSrc }");`,
@@ -36,9 +36,12 @@ const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:t
 
 const Form = tw.form`mt-8 md:mt-10 text-sm flex flex-col max-w-sm mx-auto md:mx-0`
 const Input = tw.input`mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500`
-const Textarea = styled(Input).attrs({as: "textarea"})`
-  ${ tw`h-24` }
-`
+const Textarea = styled(Input).attrs({as: "textarea"})` ${ tw`h-24` } `
+const SelectWrapper = tw.div`flex justify-center items-center w-full my-8`
+const ExteriorSelectWrapper = tw.div`flex justify-center items-center w-full`
+const Select = tw.select`first:mt-0 border-b-2 py-3 mx-4 focus:outline-none font-medium w-full transition duration-300 hocus:border-primary-500 text-secondary-300`
+const Option = tw.option`text-secondary-100`
+const TextDiv = tw.div`text-secondary-100`
 
 const SubmitButton = tw(PrimaryButtonBase)`inline-block mt-8`
 
@@ -48,14 +51,28 @@ export default ({
                         <wbr/>
                         with us to book your appointment today!</>,
                     description = "Give us a call or send us a message with the package you would like, preferred day(s) of the week and preferred time. We will be in touch to book your appointment.",
-                    phoneSection = <Description>Call us now at <PhoneNumber>(519) 404-8851</PhoneNumber> to schedule your appointment or contact us using the form below.</Description>,
+                    phoneSection = <Description>Call us now at <PhoneNumber>(519) 404-8851</PhoneNumber> to schedule
+                        your appointment or contact us using the form below.</Description>,
                     submitButtonText = "Send",
                     formAction = "#",
                     formMethod = "get",
                     textOnLeft = true,
-                    links
+                    links,
+                    interiorOptions = ['', 'Bronze (Basic interior detail)', 'Silver (Interior detail with shampoo)', 'Gold (Complete interior detail)'],
+                    exteriorOptions = ['', 'Bronze (Regular wash)', 'Silver (Wash and wax)', 'Gold (Wash, wax, and polish)', 'Platinum (Clay-bar, Carnauba wax)']
                 }) => {
     const {register, reset, handleSubmit, formState: {errors}} = useForm();
+
+    const [interiorPackage, setInteriorPackage] = useState('')
+    const [exteriorPackage, setExteriorPackage] = useState('')
+
+    const getSubject = () => {
+        let subject = ''
+        if(interiorPackage) subject += `Interior: ${interiorPackage.split('(')[0] || ''}  -  `
+        if(exteriorPackage) subject += `Exterior: ${exteriorPackage.split('(')[0] || ''}`
+
+        return subject
+    }
 
     const onSubmit = async (e) => {
         const emailParams = {
@@ -63,10 +80,9 @@ export default ({
             from_name: e.from_name,
             reply_to: e.email,
             phone: e.phone,
-            subject: e.subject,
+            subject: getSubject(),
             message: e.message
         }
-        console.log(e);
         try {
             await send(
                 process.env.REACT_APP_EMAILJS_SERVICE_ID,
@@ -74,7 +90,7 @@ export default ({
                 emailParams,
                 process.env.REACT_APP_EMAILJS_USER_ID
             )
-            toast.success("Email sent! We will be in touch ASAP!",)
+            toast.success("Email sent! We will be in touch ASAP!")
         } catch (e) {
             console.log('Error sending email: ', e);
         }
@@ -116,9 +132,35 @@ export default ({
                                     { errors.phone &&
                                     <span> Let us know your phone number so we can get in touch ASAP </span> }
 
-                                    <Input type="text" name="subject" placeholder="Package(s)"
-                                           { ...register("subject", {required: true}) }
-                                    />
+                                    <SelectWrapper>
+                                        <TextDiv>
+                                            Interior:
+                                        </TextDiv>
+                                        <Select
+                                            placeholder="Interior Package:"
+                                            onChange={ (e) => {setInteriorPackage(e.target.value)} }
+                                            value={interiorPackage}
+                                        >Interior Package
+                                            { interiorOptions.map((option, index) => (
+                                                <Option key={index} value={ option } id={ option }> { option }</Option>)) }
+                                        </Select>
+                                    </SelectWrapper>
+
+                                    <ExteriorSelectWrapper>
+                                        <TextDiv>
+                                            Exterior:
+                                        </TextDiv>
+                                        <Select
+                                            placeholder="Exterior Package:"
+                                            value={exteriorPackage}
+                                            onChange={(e) => { setExteriorPackage(e.target.value) }}
+                                        >Exterior
+                                            Package
+                                            { exteriorOptions.map((option, index) => (
+                                                <Option key={index} value={ option } id={ option }> { option }</Option>)) }
+                                        </Select>
+                                    </ExteriorSelectWrapper>
+
                                     { errors.subject && <span>Briefly specify which package you'd like or the reason for
                                 your email</span> }
 
