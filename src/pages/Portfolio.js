@@ -13,6 +13,9 @@ import gallery7 from 'images/portfolioGallery/gallery7.jpg'
 import gallery8 from 'images/portfolioGallery/gallery8.jpg'
 import gallery10 from 'images/portfolioGallery/gallery10.jpg'
 import gallery11 from 'images/portfolioGallery/gallery11.jpg'
+import gallery13 from 'images/portfolioGallery/gallery13.jpg'
+import gallery14 from 'images/portfolioGallery/gallery14.jpg'
+import gallery15 from 'images/portfolioGallery/gallery15.jpg'
 import { SEOComponent } from "../components/SEOComponent";
 import Footer from "../components/Footer";
 
@@ -86,8 +89,25 @@ const images = [
         thumbnail: gallery11,
         thumbnailAlt: 'Platinum exterior detail on a 15 year old Acura RSX by Top Shelf Mobile Detailing (video)',
         embedUrl: 'https://www.youtube.com/embed/nZPX7v17Bl8',
-        description: 'rut',
         renderItem: renderVideo.bind(this),
+    },
+    {
+        original: gallery13,
+        originalAlt: 'Platinum exterior detail on a Range Rover',
+        thumbnail: gallery13,
+        thumbnailAlt: 'Platinum exterior detail on a Range Rover',
+    },
+    {
+        original: gallery14,
+        originalAlt: 'Platinum exterior detail on this Bentley',
+        thumbnail: gallery14,
+        thumbnailAlt: 'Platinum exterior detail on Bentley',
+    },
+    {
+        original: gallery15,
+        originalAlt: 'Platinum exterior detail on this Bentley',
+        thumbnail: gallery15,
+        thumbnailAlt: 'Platinum exterior detail on this Bentley',
     },
 ];
 
