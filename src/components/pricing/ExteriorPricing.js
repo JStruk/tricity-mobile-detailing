@@ -76,13 +76,13 @@ export default ({
             name: "Gold",
             durationPrices: ["$170"],
             mainFeature: "Wash, wax, and polish",
-            features: ["Silver+Bronze packages plus:", "Wax and polish", "Polish using carnauba wax", "to finish it off"],
+            features: ["Silver+Bronze packages plus:", "Wax and polish", "Finish off with carnauba wax"],
         },
         {
             name: "Platinum",
             durationPrices: ["$350"],
             mainFeature: "High-end cars",
-            features: ["All packages plus:", "Clay-bar", "Polish using carnauba wax", "For high-end vehicles"],
+            features: ["All packages plus:", "Clay-bar", "Finish off with carnauba wax", "For high-end vehicles"],
         }
     ];
 
