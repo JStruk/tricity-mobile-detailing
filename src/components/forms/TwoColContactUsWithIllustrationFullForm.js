@@ -51,7 +51,7 @@ export default ({
                         <wbr/>
                         with us to book your appointment today!</>,
                     description = "Give us a call or send us a message with the package you would like, preferred day(s) of the week and preferred time. We will be in touch to book your appointment.",
-                    phoneSection = <Description>Call us now at <PhoneNumber>(519) 404-8851</PhoneNumber> to schedule
+                    phoneSection = <Description>Call us now at <PhoneNumber>(226) 749-4694</PhoneNumber> to schedule
                         your appointment or contact us using the form below.</Description>,
                     submitButtonText = "Send",
                     formAction = "#",
